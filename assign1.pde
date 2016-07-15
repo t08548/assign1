@@ -23,7 +23,7 @@ void draw() {
   image(fighterImg,560,300);
   image(enemyImg,x,200);
   x+= 3;
-  x%=480;
+  x%=700;
   
   
 }
