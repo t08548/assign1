@@ -9,6 +9,8 @@ int x;
 int x1;
 int x2;
 int y;
+int tx;
+int ty;
 
 void setup () {
   size(640,480) ;  // must use this size.
@@ -20,13 +22,15 @@ void setup () {
   treasureImg = loadImage ("img/treasure.png");  
   x2 = 0;
   x1 = 0;
+  tx = floor(random(640));
+  ty = floor(random(480));
 }
 
 void draw() {
   image(bg2Img,x2,0);    // your code
   image(bg1Img,x1-640,0);
   image(hpImg,50,20);
-  image(treasureImg,300,300);
+  image(treasureImg,tx,ty);
   image(fighterImg,560,300);
   image(enemyImg,x,200);
   x2++;
