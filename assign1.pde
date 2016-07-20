@@ -1,4 +1,6 @@
-/* please implement your assign1 code in this file. */
+/* please implement your assign1 code in this file.
+20160720 3rd debug 
+*/
 PImage treasureImg;
 PImage bg1Img;
 PImage bg2Img;
@@ -11,6 +13,7 @@ int x2;
 int y;
 int tx;
 int ty;
+int hp;
 
 void setup () {
   size(640,480) ;  // must use this size.
@@ -24,15 +27,19 @@ void setup () {
   x1 = 0;
   tx = floor(random(640));
   ty = floor(random(480));
+  hp = floor(random(30,215));
 }
 
 void draw() {
   image(bg2Img,x2,0);    // your code
   image(bg1Img,x1-640,0);
-  image(hpImg,50,20);
   image(treasureImg,tx,ty);
   image(fighterImg,560,300);
   image(enemyImg,x,200);
+  //rectMode(CORNERS);
+  rect(52,26,hp,14);
+  fill(#ff0000);
+  image(hpImg,50,20);
   x2++;
   x2%=640;
   x1++;
