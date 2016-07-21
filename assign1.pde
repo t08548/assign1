@@ -1,5 +1,6 @@
-/* please implement your assign1 code in this file.
-20160720 3rd debug 
+/* please implement your assign1 code in this file. 
+20160722 dubugs_3 to fix the background problem
+
 */
 PImage treasureImg;
 PImage bg1Img;
@@ -23,7 +24,7 @@ void setup () {
   fighterImg = loadImage("img/fighter.png");
   hpImg = loadImage ("img/hp.png");
   treasureImg = loadImage ("img/treasure.png");  
-  x2 = 0;
+  x2 = 640;
   x1 = 0;
   tx = floor(random(640));
   ty = floor(random(480));
@@ -31,7 +32,7 @@ void setup () {
 }
 
 void draw() {
-  image(bg2Img,x2,0);    // your code
+  image(bg2Img,x2-640,0);    // your code
   image(bg1Img,x1-640,0);
   image(treasureImg,tx,ty);
   image(fighterImg,560,300);
@@ -41,9 +42,9 @@ void draw() {
   fill(#ff0000);
   image(hpImg,50,20);
   x2++;
-  x2%=640;
+  x2%=1280;
   x1++;
-  x1%=640;
+  x1%=1280;
   x+= 3;
   x = x % 700 ;
   
